@@ -25,6 +25,6 @@ Il a été conçu dans le cadre d’un projet personnel/professionnel et son uti
 
 ## 📄 Auteur
 👤 Développé par **Cillian Bauger**  
-📬 Pour toute demande : via GitHub [@CillianBgrPro](https://github.com/CillianBgrPro)
+📬 Pour toute demande : via mail baugercillianpro@gmail.com
 
 ---
