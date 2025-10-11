@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Amical George Sand</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Amicale George Sand</title>
 </head>
 <body>
+
+  <div class="header-section">
     <div class="title">
-        <h1>L'Amicale du personnel du Centre Hospitalier George Sand</h1>
+      <h1>L'Amicale du personnel du Centre Hospitalier George Sand</h1>
+    </div>
+    <nav>
+      <a href="#" class="nav-button">L'amicale</a>
+      <a href="#" class="nav-button">Nos partenaires</a>
+      <a href="#" class="nav-button">Événements</a>
+    </nav>
+  </div>
+
+  <div class="about-section">
+    <h2 class="about-title">Qui sommes-nous ?</h2>
+    <div class="about-content">
+      <p>L'Amicale du Personnel du Centre Hospitalier George Sand est une association créée par et pour les agents de notre établissement.</p>
+      <p>Depuis sa création, elle rassemble l'ensemble du personnel hospitalier dans un esprit de solidarité et de convivialité, quels que soient les services, les métiers ou les statuts.</p>
     </div>
     
-    <div class="rectangle"></div>
+    <h2 class="mission-title">Notre Mission</h2>
+    <div class="about-content">
+      <p>Notre amicale a pour vocation de renforcer les liens entre collègues et d'améliorer la qualité de vie au travail de tous les personnels du centre hospitalier.</p>
+      <p>Nous œuvrons quotidiennement pour créer un environnement professionnel plus chaleureux et solidaire.</p>
+    </div>
+  </div>
 
-    <div class="Qui_sommes_nous">
-        <h1>Qui sommes-nous ?</h1>
-        <div class="présentation">
-            <p>L'Amicale du Personnel du Centre Hospitalier George Sand est une association créée par et pour les agents de notre établissement.</p>
-            <p>Depuis sa création, elle rassemble l'ensemble du personnel hospitalier dans un esprit de solidarité et de convivialité, quels que soient les services, les métiers ou les statuts.</p>
-        </div>
-        <div class="Notre_mission">
-            <h1>Notre Mission</h1>
-        </div>
-        <div class="mission">
-            <p>Notre amicale a pour vocation de renforcer les liens entre collègues et d'améliorer la qualité de vie au travail de tous les personnels du centre hospitalier.</p>
-            <p>Nous œuvrons quotidiennement pour créer un environnement professionnel plus chaleureux et solidaire.</p>
-        </div>
+  <div class="services-section">
+    <div class="services-grid">
+      <div class="service-card card-evenements">
+        <h3>Événements</h3>
+        <p>Découvrez nos événements conviviaux : sorties, fêtes du personnel, activités culturelles et sportives organisées tout au long de l'année pour renforcer les liens entre collègues.</p>
+      </div>
+      
+      <div class="service-card card-bonplan">
+        <h3>Bons Plans</h3>
+        <p>Profitez de nos bons plans exclusifs : réductions, offres spéciales et avantages négociés spécialement pour les membres de l'amicale.</p>
+      </div>
+      
+      <div class="service-card card-tarifs">
+        <h3>Tarifs Préférentiels</h3>
+        <p>Bénéficiez de tarifs avantageux sur de nombreux services et prestations grâce à nos partenariats avec des acteurs locaux et nationaux.</p>
+      </div>
+      
+      <div class="service-card card-reductions">
+        <h3>Réductions</h3>
+        <p>Accédez à des réductions toute l'année sur les loisirs, la culture, les vacances et bien plus encore pour améliorer votre pouvoir d'achat.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-section">
+    <div class="footer-column">
+      <h3 class="footer-title">APCH</h3>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=77+Rue+Louis+Mallet,+18000+Bourges" target="_blank" class="footer-link">
+        77 Rue Louis Mallet<br>18000 Bourges
+      </a>
+      <a href="tel:0102030405" class="footer-link">01 02 03 04 05</a>
     </div>
 
-    <div class="rectangle_bas">
-        <div class="titre_localisation">
-            <h2>APCH</h2>
-        </div>
-        <div class="localisation">
-            <a href="https://www.google.com/maps/dir/?api=1&destination=77+Rue+Louis+Mallet,+18000+Bourges" target="_blank">
-                77 Rue Louis Mallet<br>18000 Bourges
-            </a>
-        </div>
-        <div class="telephone">
-            <a href="tel:0102030405">01 02 03 04 05</a>
-        </div>
-        <div class="permanence">
-            <h3>Permanence :</h3>
-        </div>
+    <div class="footer-column">
+      <h3 class="footer-title">Permanence</h3>
+      <div class="footer-text">
+        Lundi au vendredi<br>
+        9h00 - 16h30
+      </div>
     </div>
-    <button class="top_amicale active">L'amicale</button>
-    <button class="top_partenaire active">Nos partenaires</button>
-    <div class="rectangle_evenements"></div>
-    <div class="rectangle_BonPlan"></div>
-    <div class="rectangle_tarifs"></div>
-    <div class="rectangle_reductions"></div>
+  </footer>
 
-    
 </body>
 </html>
