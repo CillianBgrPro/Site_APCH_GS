@@ -40,7 +40,6 @@ body {
   100% { background-position: 200% 50%; }
 }
 
-/* === HEADER SECTION === */
 .header-section {
   width: 100%;
   min-height: 450px;
@@ -94,7 +93,6 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* === NAVIGATION === */
 nav {
   position: absolute;
   top: 30px;
@@ -143,7 +141,6 @@ nav {
   box-shadow: 0 8px 20px rgba(139, 148, 202, 0.4);
 }
 
-/* === ABOUT SECTION === */
 .about-section {
   max-width: 1200px;
   margin: 100px auto;
@@ -202,7 +199,6 @@ nav {
   margin-bottom: 18px;
 }
 
-/* === SERVICES SECTION === */
 .services-section {
   max-width: 1400px;
   margin: 120px auto;
@@ -270,7 +266,6 @@ nav {
   z-index: 1;
 }
 
-/* Service Card Colors */
 .card-evenements {
   background: linear-gradient(135deg, #b0b0fb 0%, #9a9af5 100%);
   animation-delay: 0.1s;
@@ -291,7 +286,6 @@ nav {
   animation-delay: 0.4s;
 }
 
-/* === FOOTER SECTION === */
 .footer-section {
   width: 100%;
   min-height: 400px;
@@ -370,7 +364,6 @@ nav {
   font-weight: 500;
 }
 
-/* === SCROLLBAR === */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -388,7 +381,6 @@ nav {
   background: #7a83ba;
 }
 
-/* === RESPONSIVE === */
 @media (max-width: 1024px) {
   .title h1 {
     font-size: 2.2rem;
