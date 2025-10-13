@@ -434,3 +434,18 @@ nav {
     align-items: center;
   }
 }
+  .amicale-logo{
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8e9ff 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  flex-shrink: 0;
+  box-shadow: 0 5px 20px rgba(139, 148, 202, 0.2);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

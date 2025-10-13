@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+  <title>Nos Partenaires - Amicale George Sand</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { 
+        transform: translateY(0) translateX(0); 
+      }
+      50% { 
+        transform: translateY(-30px) translateX(20px); 
+      }
+    }
+
+    .header-section {
+      width: 100%;
+      min-height: 350px;
+      background: linear-gradient(135deg, #e8e9ff 0%, #d5d7ff 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 40px rgba(139, 148, 202, 0.15);
+      overflow: hidden;
+    }
+
+    .header-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(176, 176, 251, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .title {
+      font-family: "Playfair Display", serif;
+      color: #1a1a2e;
+      font-weight: 900;
+      text-align: center;
+      padding: 0 50px;
+      z-index: 1;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .title h1 {
+      font-size: 3rem;
+      line-height: 1.3;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+      letter-spacing: -0.5px;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      color: #1a1a2e;
+      border: 2px solid transparent;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .back-button:hover {
+      background: #8b94ca;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(139, 148, 202, 0.4);
+    }
+
+    .intro-section {
+      max-width: 1200px;
+      margin: 80px auto 60px;
+      padding: 0 50px;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .intro-section p {
+      color: #4a4a6a;
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .partners-container {
+      max-width: 1200px;
+      margin: 0 auto 100px;
+      padding: 0 50px;
+    }
+
+    .partner-card {
+      background: white;
+      border-radius: 24px;
+      padding: 50px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease-out;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .partner-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #8b94ca 0%, #b0b0fb 100%);
+      transition: width 0.4s;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .partner-card:hover::before {
+      width: 12px;
+    }
+
+    .partner-logo {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, #f8f9ff 0%, #e8e9ff 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      flex-shrink: 0;
+      box-shadow: 0 5px 20px rgba(139, 148, 202, 0.2);
+      
+    }
+
+    .partner-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .partner-name {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #1a1a2e;
+      margin: 0;
+    }
+
+    .partner-category {
+      display: inline-block;
+      background: linear-gradient(135deg, #8b94ca, #b0b0fb);
+      color: white;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 13px;
+      align-self: flex-start;
+    }
+
+    .partner-description {
+      color: #4a4a6a;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .partner-benefits {
+      background: #f8f9ff;
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 10px;
+    }
+
+    .partner-benefits h4 {
+      font-family: "Playfair Display", serif;
+      color: #1a1a2e;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .partner-benefits ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .partner-benefits li {
+      color: #4a4a6a;
+      font-size: 16px;
+      line-height: 1.8;
+      padding-left: 25px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .partner-benefits li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #8b94ca;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .partner-contact {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .contact-btn {
+      background: #8b94ca;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-btn:hover {
+      background: #7a83ba;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(139, 148, 202, 0.3);
+    }
+
+    .become-partner {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 60px;
+      background: linear-gradient(135deg, rgba(176, 176, 251, 0.1) 0%, rgba(255, 255, 255, 0.8) 100%);
+      border-radius: 24px;
+      border: 2px solid #b0b0fb;
+      text-align: center;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .become-partner h2 {
+      font-family: "Playfair Display", serif;
+      color: #1a1a2e;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+
+    .become-partner p {
+      color: #4a4a6a;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #8b94ca, #b0b0fb);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(139, 148, 202, 0.4);
+    }
+
+    @media (max-width: 968px) {
+      .partner-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .partner-logo {
+        margin: 0 auto;
+      }
+
+      .partner-category {
+        align-self: center;
+      }
+
+      .partner-contact {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-section {
+        min-height: 250px;
+      }
+
+      .title h1 {
+        font-size: 2rem;
+      }
+
+      .back-button {
+        top: 20px;
+        left: 20px;
+        padding: 12px 20px;
+        font-size: 14px;
+      }
+
+      .intro-section,
+      .partners-container {
+        padding: 0 20px;
+        margin-top: 50px;
+      }
+
+      .partner-card {
+        padding: 30px 25px;
+      }
+
+      .partner-logo {
+        width: 150px;
+        height: 150px;
+        font-size: 48px;
+      }
+
+      .partner-name {
+        font-size: 1.6rem;
+      }
+
+      .become-partner {
+        padding: 40px 30px;
+        margin: 50px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-section">
+    <a href="main.html" class="back-button">← Retour</a>
+    <div class="title">
+      <h1>Nos Partenaires</h1>
+    </div>
+  </div>
+
+  <div class="intro-section">
+    <p>
+      L'Amicale du Centre Hospitalier George Sand a tissé des partenariats solides avec des acteurs locaux et nationaux 
+      pour offrir à ses membres des avantages exclusifs et des réductions attractives. Découvrez nos partenaires engagés 
+      à nos côtés pour améliorer votre quotidien.
+    </p>
+  </div>
+
+  <div class="partners-container">
+    
+    <div class="partner-card">
+    <img src="mercier.png" class="partner-logo">
+      <div class="partner-content">
+        <h2 class="partner-name">Mercier Chocolatier</h2>
+        <span class="partner-category">Commerce Local • Alimentation & Gourmandises</span>
+        <p class="partner-description">
+          Chocolatier artisan passionné, Mercier vous propose une sélection raffinée de chocolats fins et de confiseries. 
+          Un savoir-faire traditionnel pour des moments gourmands d'exception.
+        </p>
+        <div class="partner-benefits">
+          <h4>Avantages pour les adhérents</h4>
+          <ul>
+            <li>Avantages à venir - Informations prochainement disponibles</li>
+          </ul>
+        </div>
+        <div class="partner-contact">
+          <a href="https://www.lamaisonmercier.com" class="contact-btn">Site officiel</a>
+          <a href="https://maps.app.goo.gl/umtBbfq5GBUwc2Kx6" class="contact-btn">Voir l'adresse</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo">🏛️</div>
+      <div class="partner-content">
+        <h2 class="partner-name">Ville de Bourges</h2>
+        <span class="partner-category">Partenaire Institutionnel • Culture & Loisirs</span>
+        <p class="partner-description">
+          La Ville de Bourges s'associe à l'Amicale pour promouvoir l'accès à la culture et aux loisirs. 
+          Grâce à ce partenariat, bénéficiez de tarifs avantageux sur de nombreux équipements et manifestations culturelles.
+        </p>
+        <div class="partner-benefits">
+          <h4>Avantages pour les adhérents</h4>
+          <ul>
+            <li>Tarifs réduits sur les spectacles du Printemps de Bourges</li>
+            <li>Accès préférentiel aux piscines et complexes sportifs municipaux</li>
+            <li>Réductions sur les événements culturels municipaux</li>
+            <li>Facilités d'accès aux médiathèques et bibliothèques</li>
+          </ul>
+        </div>
+        <div class="partner-contact">
+          <a href="https://www.ville-bourges.fr" target="_blank" class="contact-btn">🌐 Site officiel</a>
+          <a href="#" class="contact-btn">📧 Contact</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="become-partner">
+    <h2>Vous souhaitez devenir partenaire ?</h2>
+    <p>
+      Vous êtes un commerce, une institution ou une entreprise et vous souhaitez rejoindre notre réseau de partenaires ? 
+      Contactez-nous pour étudier ensemble les opportunités de collaboration qui bénéficieront à nos adhérents.
+    </p>
+    <a href="mailto:amicale.georgesand@gmail.com" class="cta-button">Devenir partenaire</a>
+  </div>
+
+</body>
+</html>
