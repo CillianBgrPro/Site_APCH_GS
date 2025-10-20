@@ -37,7 +37,7 @@
 
   <div class="services-section">
     <div class="services-grid">
-      <div class="service-card card-evenements">
+      <div class="service-card card-evenements" onclick="window.location.href='evenements.html'">
         <h3>Événements</h3>
         <p>Découvrez nos événements conviviaux : sorties, fêtes du personnel, activités culturelles et sportives organisées tout au long de l'année pour renforcer les liens entre collègues.</p>
       </div>
@@ -52,30 +52,71 @@
         <p>Bénéficiez de tarifs avantageux sur de nombreux services et prestations grâce à nos partenariats avec des acteurs locaux et nationaux.</p>
       </div>
       
-      <div class="service-card card-reductions">
-        <h3>Réductions</h3>
-        <p>Accédez à des réductions toute l'année sur les loisirs, la culture, les vacances et bien plus encore pour améliorer votre pouvoir d'achat.</p>
+      <div class="service-card card-rejoindre" onclick="openModal()">
+        <h3>Nous rejoindre</h3>
+        <p>Rejoignez l'Amicale du Centre Hospitalier George Sand et profitez de tous nos avantages exclusifs pour le personnel et les familles.</p>
       </div>
     </div>
   </div>
 
   <footer class="footer-section">
     <div class="footer-column">
-      <h3 class="footer-title">CHGS</h3>
+      <h3 class="footer-title">Contact</h3>
       <a href="https://www.google.com/maps/dir/?api=1&destination=77+Rue+Louis+Mallet,+18000+Bourges" target="_blank" class="footer-link">
-        77 Rue Louis Mallet<br>18000 Bourges
+        77 Rue Louis Mallet, 18000 Bourges
       </a>
-      <a href="tel:0102030405" class="footer-link">01 02 03 04 05</a>
+      <a href="tel:0614773513" class="footer-link">06 14 77 35 13</a>
+      <div class="footer-text">
+        Permanence : Lundi au vendredi, 9h00 - 18h00
+      </div>
     </div>
 
     <div class="footer-column">
-      <h3 class="footer-title">Permanence</h3>
-      <div class="footer-text">
-        Lundi au vendredi<br>
-        9h00 - 16h30
-      </div>
+      <a href="https://www.facebook.com/photo.php?fbid=1101200995340771&id=100063526416416&set=a.509202421207301" target="_blank" class="facebook-link">
+        Facebook
+      </a>
     </div>
   </footer>
+
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Nous rejoindre</h2>
+      <div class="modal-text">
+        <p>L'Amicale du Centre Hospitalier George Sand est ouverte à tout le personnel qu'il soit médecin, soignant, administratif ou technique, titulaire ou contractuel ainsi qu'aux personnes extérieures.</p>
+        <p>Vous êtes toutes et tous les bienvenus.</p>
+        
+        <h3>Cotisations :</h3>
+        <ul class="cotisations-list">
+          <li><strong>Carte membres du bureau :</strong> 10.00€</li>
+          <li><strong>Carte adhérent agent du CHGS :</strong> 20.00€</li>
+          <li><strong>Carte adhérent personnes extérieures :</strong> 25.00€</li>
+        </ul>
+        
+        <p class="note">La carte d'adhérent est valable 1 an et pour toute la famille.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('modal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
 
 </body>
 </html>
